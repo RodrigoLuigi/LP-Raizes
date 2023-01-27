@@ -101,6 +101,27 @@ function activateMenuAtCurrentSection() {
     }
   }
 }
+/* GOOGLE MAPS */
+function init_map() {
+  var myOptions = {
+    zoom: 17,
+    center: new google.maps.LatLng(-20.51648499992217, -43.71024075116219),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+  marker = new google.maps.Marker({
+    map: map,
+    position: new google.maps.LatLng(-20.51648499992217, -43.71024075116219)
+  });
+  infowindow = new google.maps.InfoWindow({
+    content: '<strong> Nativa Natural - Açaí & Smoothie Bowls<br> Granolas Raízes </strong><br>Av. Mariza de Souza Mendes <br>'
+  });
+  google.maps.event.addListener(marker, 'click', function () {
+    infowindow.open(map, marker);
+  });
+  infowindow.open(map, marker);
+}
+google.maps.event.addDomListener(window, 'load', init_map);
 
 /* When scroll*/
 window.addEventListener('scroll', function () {
