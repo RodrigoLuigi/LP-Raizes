@@ -25,8 +25,11 @@ const navHeight = header.offsetHeight;
 function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll');
+   /*  header.style.backgroundColor = "rgba(252, 249, 238, 1)"; */
   } else {
     header.classList.remove('scroll');
+    /* header.style.backgroundColor = "transparent"; */
+
   }
 }
 
@@ -101,6 +104,7 @@ function activateMenuAtCurrentSection() {
     }
   }
 }
+
 /* GOOGLE MAPS */
 function init_map() {
   var myOptions = {
@@ -121,6 +125,7 @@ function init_map() {
   });
   infowindow.open(map, marker);
 }
+
 google.maps.event.addDomListener(window, 'load', init_map);
 
 /* When scroll*/

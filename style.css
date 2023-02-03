@@ -133,10 +133,11 @@ body {
   left: 0;
   z-index: 100;
   /* background-image: url(./assets/palmeiras.png); */
-  background-image: url(assets/folhas-palmeiras.png);
+  background-image: url(assets/images/folhas-palmeiras.png);
   /* background-size: 100%; */
   background-repeat: no-repeat;
    background-color: rgba(252, 249, 238, 1);
+  transition: 100ms ease-in;
 }
 
 #header.scroll {
@@ -155,15 +156,6 @@ body {
   width: 150px;
   margin: 15px 0;
 }
-
-.logo svg path {
-  fill: #6e2a05;
-}
-
-.logo svg path:last-child {
-  fill: #fcfaf0;
-}
-
 /*=========== NAVIGATION ===============================*/
 
 nav {
@@ -171,7 +163,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: var(--header-height);
+/*   height: var(--header-height); */
 }
 
 nav ul li {
@@ -284,12 +276,12 @@ nav.show div.icon-close {
 
 #home .image::before {
   content: '';
-  height: 135%;
-  width: 120%;
+  height: 149%;
+  width: 158%;
   background: rgba(230, 221, 190, 0.612);
   position: absolute;
-  top: -16.8%;
-  left: 16.7%;
+  top: -25.8%;
+  left: 3.7%;
   border-radius: 0% 0% 0% 100%;
 
   z-index: 0;
@@ -313,14 +305,6 @@ nav.show div.icon-close {
 #home .text p {
   margin-bottom: 2rem;
 }
-
-/* .styles_grid__t17Zu {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 1rem;
-  gap: 1rem;
-  padding: 0 1rem;
-} */
 
 /*=========== ABOUT ===============================*/
 
@@ -391,7 +375,7 @@ nav.show div.icon-close {
 }
 
 #about .image .img:nth-child(6) {
-  background-image: url(assets/granolas.jpg);
+  background-image: url(assets/Fotos/banner9.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -449,6 +433,10 @@ nav.show div.icon-close {
   margin-bottom: 0.75rem;
 }
 
+.card p {
+  padding-bottom: 2rem;
+}
+
 .widget {
   position: absolute;
   bottom: 0;
@@ -483,6 +471,10 @@ nav.show div.icon-close {
 .widget:hover i {
   opacity: 0;
   transform: translateY(-50px);
+}
+
+.widget img {
+  width: 2.9rem;
 }
 
 /*=========== TESTIMONIALS ===============================*/
@@ -670,12 +662,12 @@ footer .social a:hover {
   }
 
   .section{
-    padding: 5rem 0;
+    padding: 10rem 0;
   }
 
   .section header,
   #testimonials header{
-    max-width: 32rem;
+    max-width: 58rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -714,11 +706,6 @@ footer .social a:hover {
   } 
 
   /* LAYOUT */
-
-  main {
-    margin-top: var(--header-height);
-  }
-
   /* home */
   #home .container{
     grid-auto-flow: column;
@@ -726,9 +713,9 @@ footer .social a:hover {
     margin: 0 auto;
   }
 
-  #home.section{
+  /* #home.section{
     padding: 0 0 5rem;
-  }
+  } */
 
   #home .image{
     order: 1;
@@ -750,6 +737,10 @@ footer .social a:hover {
   #about .container{
     grid-auto-flow: column;
     margin: 0 auto;
+  }
+
+  #about .image {
+    width: 35rem;
   }
 
   /* PRODUCTS */
